@@ -1,58 +1,18 @@
 {% extends "layout.html" %}
+
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Our Public Blog</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-            <div class="container">
-                <a class="navbar-brand mr-4" href="/">Public Blog</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarToggle">
-                    <div class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link" href="/">Home</a>
-                        <a class="nav-item nav-link active" href="/about">About</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main role="main" class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="content-section">
-                    <h1 class="article-title">About Our Public Blog</h1>
-                    <div class="article-content">
-                        <p>Welcome to our public blog! This is a community-driven platform where anyone can share their thoughts, experiences, and insights on various topics.</p>
-                        <p>Here's what you can expect from our blog:</p>
-                        <ul>
-                            <li>Diverse content from multiple contributors</li>
-                            <li>A wide range of topics and perspectives</li>
-                            <li>Opportunities to engage in meaningful discussions</li>
-                            <li>A supportive and inclusive community</li>
-                        </ul>
-                        <p>We encourage everyone to participate, whether by reading, commenting, or contributing your own posts. Together, we can create a vibrant and informative space for sharing ideas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="bg-steel">
-        <div class="container">
-            <p class="text-center text-white">&copy; 2024 Public Blog. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
-{% endblock content %}     
-
+<div class="content-section">
+    <h1 class="article-title">About Our Public Blog</h1>
+    <div class="article-content">
+        <p>Welcome to our public blog! This is a community-driven platform where anyone can share their thoughts, experiences, and insights on various topics.</p>
+        <p>Here's what you can expect from our blog:</p>
+        <ul>
+            <li>Diverse content from multiple contributors</li>
+            <li>A wide range of topics and perspectives</li>
+            <li>Opportunities to engage in meaningful discussions</li>
+            <li>A supportive and inclusive community</li>
+        </ul>
+        <p>We encourage everyone to participate, whether by reading, commenting, or contributing your own posts. Together, we can create a vibrant and informative space for sharing ideas.</p>
+    </div>
+</div>
+{% endblock content %}
