@@ -3,6 +3,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import requests
 import logging
 from index import create_app, db
+from flask import request, jsonify
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -28,9 +29,23 @@ scheduler = BackgroundScheduler()
 scheduler.add_job(func=restart_server, trigger="interval", minutes=14)
 scheduler.start()
 
-# @app.route('/')
-# def home():
-#     return "Hello, World!"
+#The traffic API endpoint
+@app.route('/api/traffic', methods=['POST'])
+def handle_traffic():
+    secret = request.headers.get('X-Extension-Secret')
+    if secret != 'YOUR_SECRET_KEY':
+        return jsonify({'error': 'Unauthorized'}), 401
+    
+    data = request.get_json()
+    # Log received traffic data
+    logger.info(f"Received traffic data: {data}")
+    
+    # Process and store data for ML model
+    # You can add your data processing logic here
+    
+    # Return alerts if needed
+    return jsonify({'status': 'success', 'alert': False})
+
 
 with app.app_context():
     db.create_all()
